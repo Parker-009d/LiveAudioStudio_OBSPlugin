@@ -36,10 +36,10 @@
             "bundleId": "com.example.plugintemplate-for-obs"
         }
     },
-    "name": "plugintemplate-for-obs",
-    "displayName": "Plugin Template for OBS",
+    "name": "live-audio-studio-obs-plugin",
+    "displayName": "Live Audio Studio",
     "version": "1.0.0",
-    "author": "Your Name Here",
-    "website": "https://example.com",
-    "email": "me@example.com"
+    "author": "Live Audio Studio",
+    "email": "paulkenk798@gmail.com",
+    "website": "https://github.com/Parker-009d/LiveAudioStudio_OBSPlugin",
 }
