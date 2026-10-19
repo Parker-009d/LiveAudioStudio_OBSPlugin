@@ -68,14 +68,12 @@ static obs_properties_t *gain_filter_properties(void *data)
 
 	obs_properties_t *properties = obs_properties_create();
 
-	obs_properties_add_float_slider(
-		properties, "gain_db", "Gain (dB)", -24.0, 24.0, 0.5);
+	obs_properties_add_float_slider(properties, "gain_db", "Gain (dB)", -24.0, 24.0, 0.5);
 
 	return properties;
 }
 
-static struct obs_audio_data *gain_filter_audio(
-	void *data, struct obs_audio_data *audio)
+static struct obs_audio_data *gain_filter_audio(void *data, struct obs_audio_data *audio)
 {
 	struct gain_filter_data *filter = data;
 	const float gain = atomic_load(&filter->gain_linear);
@@ -83,8 +81,7 @@ static struct obs_audio_data *gain_filter_audio(
 	if (!audio || gain == 1.0f)
 		return audio;
 
-	const size_t channel_count =
-		sizeof(audio->data) / sizeof(audio->data[0]);
+	const size_t channel_count = sizeof(audio->data) / sizeof(audio->data[0]);
 
 	for (size_t channel = 0; channel < channel_count; ++channel) {
 		if (!audio->data[channel])
@@ -115,8 +112,7 @@ static struct obs_source_info gain_filter = {
 bool obs_module_load(void)
 {
 	obs_register_source(&gain_filter);
-	obs_log(LOG_INFO, "Live Audio Studio Gain filter registered (version %s)",
-		PLUGIN_VERSION);
+	obs_log(LOG_INFO, "Live Audio Studio Gain filter registered (version %s)", PLUGIN_VERSION);
 	return true;
 }
 
