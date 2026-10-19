@@ -1,59 +1,30 @@
-# OBS Plugin Template
+# Live Audio Studio OBS Plugin
 
-## Introduction
+Live Audio Studio is an audio-focused plugin project for OBS Studio, designed for livestreaming, broadcasting, and church production.
 
-The plugin template is meant to be used as a starting point for OBS Studio plugin development. It includes:
+Our goal is to make live audio workflows easier by bringing audio control and processing closer to OBS Studio.
 
-* Boilerplate plugin source code
-* A CMake project file
-* GitHub Actions workflows and repository actions
+## Features and Project Goals
 
-## Supported Build Environments
+- Audio-focused workflows for livestreaming.
+- Integration with OBS Studio.
+- Development toward flexible audio processing and routing.
+- Build packages for macOS, Windows, and Ubuntu Linux.
 
-| Platform  | Tool   |
-|-----------|--------|
-| Windows   | Visual Studio 17 2022 |
-| macOS     | XCode 16.0 |
-| Windows, macOS  | CMake 3.30.5 |
-| Ubuntu 24.04 | CMake 3.28.3 |
-| Ubuntu 24.04 | `ninja-build` |
-| Ubuntu 24.04 | `pkg-config`
-| Ubuntu 24.04 | `build-essential` |
+## Downloads
 
-## Quick Start
+Download the available builds from the [Live Audio Studio Releases page](https://github.com/Parker-009d/LiveAudioStudio_OBSPlugin/releases).
 
-An absolute bare-bones [Quick Start Guide](https://github.com/obsproject/obs-plugintemplate/wiki/Quick-Start-Guide) is available in the wiki.
+Available release packages may include macOS, Windows x64, and Ubuntu Linux x86_64.
 
-## Documentation
+## Compatibility
 
-All documentation can be found in the [Plugin Template Wiki](https://github.com/obsproject/obs-plugintemplate/wiki).
+Compatibility depends on the release, operating system, and OBS Studio version.
 
-Suggested reading to get up and running:
+## Virtual Audio Routing
 
-* [Getting started](https://github.com/obsproject/obs-plugintemplate/wiki/Getting-Started)
-* [Build system requirements](https://github.com/obsproject/obs-plugintemplate/wiki/Build-System-Requirements)
-* [Build system options](https://github.com/obsproject/obs-plugintemplate/wiki/CMake-Build-System-Options)
+System-wide virtual audio routing requires additional platform-specific support. Check the release documentation for the capabilities included in each build.
 
-## GitHub Actions & CI
+## Contributing
 
-Default GitHub Actions workflows are available for the following repository actions:
-
-* `push`: Run for commits or tags pushed to `master` or `main` branches.
-* `pr-pull`: Run when a Pull Request has been pushed or synchronized.
-* `dispatch`: Run when triggered by the workflow dispatch in GitHub's user interface.
-* `build-project`: Builds the actual project and is triggered by other workflows.
-* `check-format`: Checks CMake and plugin source code formatting and is triggered by other workflows.
-
-The workflows make use of GitHub repository actions (contained in `.github/actions`) and build scripts (contained in `.github/scripts`) which are not needed for local development, but might need to be adjusted if additional/different steps are required to build the plugin.
-
-### Retrieving build artifacts
-
-Successful builds on GitHub Actions will produce build artifacts that can be downloaded for testing. These artifacts are commonly simple archives and will not contain package installers or installation programs.
-
-### Building a Release
-
-To create a release, an appropriately named tag needs to be pushed to the `main`/`master` branch using semantic versioning (e.g., `12.3.4`, `23.4.5-beta2`). A draft release will be created on the associated repository with generated installer packages or installation programs attached as release artifacts.
-
-## Signing and Notarizing on macOS
-
-Basic concepts of codesigning and notarization on macOS are explained in the correspodning [Wiki article](https://github.com/obsproject/obs-plugintemplate/wiki/Codesigning-On-macOS) which has a specific section for the [GitHub Actions setup](https://github.com/obsproject/obs-plugintemplate/wiki/Codesigning-On-macOS#setting-up-code-signing-for-github-actions).
+Contributions, testing, and feedback are welcome as the project develops.
