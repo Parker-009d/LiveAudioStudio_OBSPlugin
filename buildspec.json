@@ -1,3 +1,4 @@
+
 {
     "dependencies": {
         "obs-studio": {
@@ -41,5 +42,5 @@
     "version": "1.0.0",
     "author": "Live Audio Studio",
     "email": "paulkenk798@gmail.com",
-    "website": "https://github.com/Parker-009d/LiveAudioStudio_OBSPlugin",
+    "website": "https://github.com/Parker-009d/LiveAudioStudio_OBSPlugin"
 }
